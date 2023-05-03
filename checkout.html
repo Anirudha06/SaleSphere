@@ -2,6 +2,7 @@
 <html>
     
     <head>
+      <link rel="stylesheet" href="main.js">
         <meta charset="utf-8">
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <title>Checkout -Easy Life Store | Ecommerce website</title>
@@ -12,6 +13,12 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     </head>
+    <script type="text/javascript">
+      function showMessage() {
+          alert("Payment Done Successfully!");
+          window.location.reload();
+      }
+  </script>
     <body>
         <div class ="header">
         <div class="container">
@@ -43,20 +50,19 @@
           <div class='credit-info-content'>
             <table class='half-input-table'>
               <h2>Billing Details</h2>
-            Customer name
-            <input class='input-field'></input>
-            Customer Address 
-            <input class='input-field'></input>
-            Phone Number
-            <input class='input-field'></input>
-            Card Number
-            <input class='input-field'></input>
-            Total Amount
-            <input class='input-field'></input>
+            Customer name*
+            <input class='input-field' required></input>
+            Customer Address*
+            <input class='input-field' required></input>
+            Phone Number*
+            <input class='input-field' type="number" pattern="[1-9]{1}[0-9]{9}" required></input>
+            Card Number*
+            <input class='input-field' type="number" required></input>
+            Total Amount*
+            <input class='input-field' required></input>
           </table>
 
-            <button class='pay-btn'>Payment</button>
-
+            <button class='pay-btn' type="reset" id="payment" onclick="showMessage()">Payment</button>
           </div>
 
         
@@ -73,6 +79,7 @@
         </div>
     </div>
         
+  
        
         
         <!----------------------------------footer------------------------------------->
