@@ -265,9 +265,9 @@ function deleteButtons() {
     }
 }
 
+onLoadCartNumbers();
+displayCart();
+
 $("#payment").click(function() {
     alert("Payment Successful!.");
  });
-
-onLoadCartNumbers();
-displayCart();
