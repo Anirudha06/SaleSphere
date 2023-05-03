@@ -20,7 +20,13 @@ let products = [
         inCart: 0
     },
     {
-        name: "White Shirt",
+        name: "Easy Backpack",
+        tag: "blackbackpack",
+        price: 2500,
+        inCart: 0
+    },
+    {
+        name: "Easy Shirt",
         tag: "whiteshirt",
         price: 2000,
         inCart: 0
@@ -42,7 +48,37 @@ let products = [
         tag: "ladiesshoes",
         price: 3000,
         inCart: 0
-    }
+    },
+    {
+        name: "Easy Mens Shoes",
+        tag: "product-9",
+        price: 4000,
+        inCart: 0
+    },
+    {
+        name: "Easy Shoes",
+        tag: "product-10",
+        price: 3500,
+        inCart: 0
+    },
+    {
+        name: "Gucci watch",
+        tag: "product-11",
+        price: 8000,
+        inCart: 0
+    },
+    {
+        name: "Easy Hand Bag",
+        tag: "product-13",
+        price: 4500,
+        inCart: 0
+    },
+    {
+        name: "Easy Ladies Shoes",
+        tag: "product-14",
+        price: 4000,
+        inCart: 0
+    },
        
     
 
