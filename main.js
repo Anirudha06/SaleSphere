@@ -20,7 +20,13 @@ let products = [
         inCart: 0
     },
     {
-        name: "White Shirt",
+        name: "Easy Backpack",
+        tag: "blackbackpack",
+        price: 2500,
+        inCart: 0
+    },
+    {
+        name: "Easy Shirt",
         tag: "whiteshirt",
         price: 2000,
         inCart: 0
@@ -42,7 +48,37 @@ let products = [
         tag: "ladiesshoes",
         price: 3000,
         inCart: 0
-    }
+    },
+    {
+        name: "Easy Mens Shoes",
+        tag: "product-9",
+        price: 4000,
+        inCart: 0
+    },
+    {
+        name: "Easy Shoes",
+        tag: "product-10",
+        price: 3500,
+        inCart: 0
+    },
+    {
+        name: "Gucci watch",
+        tag: "product-11",
+        price: 8000,
+        inCart: 0
+    },
+    {
+        name: "Easy Hand Bag",
+        tag: "product-13",
+        price: 4500,
+        inCart: 0
+    },
+    {
+        name: "Easy Ladies Shoes",
+        tag: "product-14",
+        price: 4000,
+        inCart: 0
+    },
        
     
 
@@ -143,19 +179,19 @@ function displayCart() {
             `<div class="product"><ion-icon name="close-circle"></ion-icon><img src="./images/${item.tag}.png" />
                 <span class="sm-hide">${item.name}</span>
             </div>
-            <div class="price sm-hide">$${item.price},00</div>
+            <div class="price sm-hide">₹${item.price},00</div>
             <div class="quantity">
                 <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
                     <span>${item.inCart}</span>
                 <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
             </div>
-            <div class="total">$${item.inCart * item.price},00</div>`;
+            <div class="total">₹${item.inCart * item.price},00</div>`;
         });
 
         productContainer.innerHTML += `
             <div class="basketTotalContainer">
                 <h4 class="basketTotalTitle">Basket Total</h4>
-                <h4 class="basketTotal">$${cart},00</h4>
+                <h4 class="basketTotal">₹${cart},00</h4>
             </div>`
 
         deleteButtons();
