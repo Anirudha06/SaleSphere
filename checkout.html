@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Checkout -Easy Life Store | Ecommerce website</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <!--added a cdn link by searching font awesome4 cdn and getting this link from https://www.bootstrapcdn.com/fontawesome/ this url*/-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <div class ="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" width="100px">
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                         <li><a href="products.html">Products</a></li>
+                         
+                         <li><a href="contactus.html">ContactUs</a></li>
+                         <li><a href="account.html">Account</a></li>
+
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+                <img src="images/menu.png" class="menu-icon" onClick="menutoggle()" >
+            </div>
+            
+            <div class="row">
+                <div class="col-2">
+                    <div class='container'>
+  
+  <div class='window'>
+    
+        <div class='credit-info'>
+          <div class='credit-info-content'>
+            <table class='half-input-table'>
+              <h2>Billing Details</h2>
+            Customer name
+            <input class='input-field'></input>
+            Customer Address 
+            <input class='input-field'></input>
+            Phone Number
+            <input class='input-field'></input>
+            Card Number
+            <input class='input-field'></input>
+            Total Amount
+            <input class='input-field'></input>
+          </table>
+
+            <button class='pay-btn'>Payment</button>
+
+          </div>
+
+        
+
+        </div>
+      </div>
+    </div>
+
+                </div>
+                <div class="col-2">
+                  <img style="width: 40%;" src="images/image1.png">
+                </div>
+            </div>
+        </div>
+    </div>
+        
+       
+        
+        <!----------------------------------footer------------------------------------->
+        <br>
+        <div class ="footer">
+          <div class="container">
+              
+              <div class="row">
+                  <div class="footer-col-1">
+                      <h3>Download Our App</h3>
+                      <p>Download App for Android and ios mobile phone.</p>
+                      <div class="app-logo">
+                          <img src="images/play-store.png" alt="">
+                          <img src="images/app-store.png" alt="">
+                      </div>
+                  </div><br>
+                  <div class="footer-col-2">
+                      <h1 class="footer-title">SaleSphere</h1><br>
+                      <div>
+                          <span class="color_icon">
+                              <i class="fas fa-map-marker-alt"></i>
+                              Opposite of N.M.A.M Institute of Technology
+                          </span>
+                          </div>
+                      <div>
+                          <span class="color_icon">
+                              <i class="far fa-envelope"></i>
+                               SaleSphere@gmail.com
+                          </span>
+                         </div>
+                      <div>
+                          <span class="color_icon">
+                              <i class="fas fa-phone"></i>
+                               +91 8856732245
+                          </span>
+                         </div>
+                  </div>
+                  <div class="footer-col-3">
+                      <h3>Useful Links</h3>
+                     <ul>
+                         <li>Coupons</li>
+                         <li>Blog Post</li>
+                         <li>Return Policy</li>
+                         <li>Join Affiliate</li>
+                      </ul>
+                  </div>
+                  <div class="footer-col-4">
+                      <h3>Follow us</h3>
+                     <ul>
+                         <li>Facebook</li>
+                         <li>Twitter</li>
+                         <li>Instagram</li>
+                         <li>Youtube</li>
+                      </ul>
+                  </div>
+                  
+              </div>
+          
+              
+          </div>
+      </div>
+        
+        
+        <!-----------------------------------js for toggle menu----------------------------------------------->
+        <script>
+            var cardDrop = document.getElementById('card-dropdown');
+var activeDropdown;
+cardDrop.addEventListener('click',function(){
+  var node;
+  for (var i = 0; i < this.childNodes.length-1; i++)
+    node = this.childNodes[i];
+    if (node.className === 'dropdown-select') {
+      node.classList.add('visible');
+       activeDropdown = node; 
+    };
+})
+
+window.onclick = function(e) {
+  console.log(e.target.tagName)
+  console.log('dropdown');
+  console.log(activeDropdown)
+  if (e.target.tagName === 'LI' && activeDropdown){
+    if (e.target.innerHTML === 'Master Card') {
+      document.getElementById('credit-card-image').src = 'https://dl.dropboxusercontent.com/s/2vbqk5lcpi7hjoc/MasterCard_Logo.svg.png';
+          activeDropdown.classList.remove('visible');
+      activeDropdown = null;
+      e.target.innerHTML = document.getElementById('current-card').innerHTML;
+      document.getElementById('current-card').innerHTML = 'Master Card';
+    }
+    else if (e.target.innerHTML === 'American Express') {
+         document.getElementById('credit-card-image').src = 'https://dl.dropboxusercontent.com/s/f5hyn6u05ktql8d/amex-icon-6902.png';
+          activeDropdown.classList.remove('visible');
+      activeDropdown = null;
+      e.target.innerHTML = document.getElementById('current-card').innerHTML;
+      document.getElementById('current-card').innerHTML = 'American Express';      
+    }
+    else if (e.target.innerHTML === 'Visa') {
+         document.getElementById('credit-card-image').src = 'https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png';
+          activeDropdown.classList.remove('visible');
+      activeDropdown = null;
+      e.target.innerHTML = document.getElementById('current-card').innerHTML;
+      document.getElementById('current-card').innerHTML = 'Visa';
+    }
+  }
+  else if (e.target.className !== 'dropdown-btn' && activeDropdown) {
+    activeDropdown.classList.remove('visible');
+    activeDropdown = null;
+  }
+}
+        </script>
+    </body>
+</html>

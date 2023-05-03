@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Shopping Cart</title>
+</head>
+
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/*nav maenu on the left as a unordered list*/
+.navbar{
+    display:flex;
+    align-items: center;
+    padding:10px;
+}
+/*nav maenu on the right as a unordered list*/
+nav{
+    flex: 1;
+    text-align: right;
+}
+/*nav maenu on the right as a list but without bullet*/
+nav ul{
+    display: inline-block;
+    list-style-type: none;   
+}
+/*nav maenu on the right as a vertically list with 50px gapping with each with underline*/
+nav ul li{
+    display: inline-block;
+    margin-right: 50px;   
+}
+/*nav maenu on the right as a vertically list with 50px gapping with each without underline*/
+a{
+    text-decoration: none;
+    color: #555;
+
+}
+
+a:hover{
+     color: #00bfff;
+
+}
+
+
+.add-cart{
+        display: inline-block;
+        background: #5cb1cf;
+        color: #fff;
+        padding:8px 20px;
+        margin: 20px 0px;
+        border-radius: 30px;
+        transition:background 0.5s;
+    }
+
+
+
+.container-products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    
+}
+
+.image {
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+
+/* ----------------- CART PAGE --------------- */
+
+.container-products {
+    max-width: 700px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.container-products ion-icon {
+    font-size: 25px;
+    color: blue;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.product-header {
+    width: 200%;
+    max-width: 900px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: #00bfff;
+    margin: 0 auto;
+}
+
+.product-title {
+    width: 45%;
+    border-bottom: 1px solid lightgray;
+
+}
+
+.price {
+    width: 15%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.quantity {
+    width: 30%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.total {
+    width: 10%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.product {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.product ion-icon {
+    cursor: pointer;
+    
+}
+
+.products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products img {
+    width: 75px;
+}
+
+.basketTotalContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.basketTotalTitle {
+    width: 30%;
+}
+
+.basketTotal {
+    width: 10%;
+}
+
+@media(max-width: 500px) {
+    nav h2 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;;
+    }
+
+    .sm-hide {
+        display: none;;
+    }
+
+    .products,
+    .product-header {
+        justify-content: center;
+    }
+
+    .basketTotalContainer {
+        padding-right: 8%;
+    }
+}
+
+
+</style>
+<body>
+    
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" width="100px">
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                 <li><a href="products.html">Products</a></li>
+                 
+                 <li><a href="contactus.html">ContactUs</a></li>
+                 <li><a href="account.html">Account</a></li>
+                 <li class="cart">
+                    <a href="cart.html">
+                        <ion-icon name="basket"></ion-icon>Cart<span>0</span>
+                    </a>
+                </li>
+                                            
+
+
+            </ul>
+        </nav>
+        
+    </div>
+
+        
+
+
+
+     
+    <div class="container-products">
+        
+        <div class="product-header">
+            <h5 class="product-title">&nbsp;&nbsp;&nbsp;&nbsp;PRODUCT</h5>
+            <h5 class="price sm-hide">PRICE</h5>
+            <h5 class="quantity">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QUANTITY</h5>
+            <h5 class="total">TOTAL</h5>
+        </div>
+        <div class="products">
+
+        </div>
+        <a class="add-cart" href="checkout.html">Checkout</a>
+    </div>
+    <br>
+    <div class ="footer">
+      <div class="container">
+          
+          <div class="row">
+              <div class="footer-col-1">
+                  <h3>Download Our App</h3>
+                  <p>Download App for Android and ios mobile phone.</p>
+                  <div class="app-logo">
+                      <img src="images/play-store.png" alt="">
+                      <img src="images/app-store.png" alt="">
+                  </div>
+              </div><br>
+              <div class="footer-col-2">
+                  <h1 class="footer-title">SaleSphere</h1><br>
+                  <div>
+                      <span class="color_icon">
+                          <i class="fas fa-map-marker-alt"></i>
+                          Opposite of N.M.A.M Institute of Technology
+                      </span>
+                      </div>
+                  <div>
+                      <span class="color_icon">
+                          <i class="far fa-envelope"></i>
+                           SaleSphere@gmail.com
+                      </span>
+                     </div>
+                  <div>
+                      <span class="color_icon">
+                          <i class="fas fa-phone"></i>
+                           +91 8856732245
+                      </span>
+                     </div>
+              </div>
+              <div class="footer-col-3">
+                  <h3>Useful Links</h3>
+                 <ul>
+                     <li>Coupons</li>
+                     <li>Blog Post</li>
+                     <li>Return Policy</li>
+                     <li>Join Affiliate</li>
+                  </ul>
+              </div>
+              <div class="footer-col-4">
+                  <h3>Follow us</h3>
+                 <ul>
+                     <li>Facebook</li>
+                     <li>Twitter</li>
+                     <li>Instagram</li>
+                     <li>Youtube</li>
+                  </ul>
+              </div>
+              
+          </div>
+      
+          
+      </div>
+  </div>
+
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+
+
+</body>
+</html>
