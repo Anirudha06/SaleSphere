@@ -264,7 +264,6 @@ function deleteButtons() {
         })
     }
 }
-
 onLoadCartNumbers();
 displayCart();
 
