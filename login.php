@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('connection.php') ?> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -131,13 +131,13 @@ form,
         
     </div>
    
-</div>
+</div id="form">
   <div class="header">
     <h2>Login</h2>
   </div>
      
-  <form method="post" action="login.php">
-    <?php include('errors.php'); ?>
+  <form  action="log.php" onsubmit=" return isvalid()" method="POST">
+    <!-- <?php include('errors.php'); ?>  -->
     <div class="input-group">
         <label>Username</label>
         <input type="text" name="username" >
@@ -147,7 +147,7 @@ form,
         <input type="password" name="password">
     </div>
     <div class="input-group">
-        <button type="submit" class="btn" name="login_user">Login</button>
+        <button type="submit" class="btn" name="submit">Login</button>
     </div>
     <p>
         Not yet a member? <a href="register.html">Sign up</a>
@@ -214,7 +214,27 @@ form,
 </div>
 
     <!-- ion-icon -->
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js">
+  function isvalid(){
+  var user= document.form.user.value;
+  var pass = document.form.pass.value;
+  if(user.length=="" && pass.length==""){
+    alert("username and password field is Empty!!");
+    return false;
+  }
+  else{
+    if(user.length=="" ){
+    alert("username is Empty!!");
+    return false;
+  }
+    if(pass.length=="" ){
+    alert("Password is Empty!!");
+    return false;
+  }
+  }  
+}
+
+    </script>
 
   
 </body>

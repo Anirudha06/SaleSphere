@@ -14,7 +14,16 @@
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-
+<!-- <style>
+    .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#NavBar {
+  overflow:visible;
+}
+</style> -->
     </head>
     <body>
         <!-- ion-icon -->
@@ -22,7 +31,7 @@
         
         <div class ="header">
         <div class="container">
-            <div class="navbar">
+            <div class="navbar sticky" id="navbar">
                 <div class="logo">
                     <img src="images/logo.png" width="100px">
                 </div>
@@ -32,7 +41,7 @@
                          <li><a href="products.html">Products</a></li>
                          <li><a href="contactus.html">ContactUs</a></li>
                          
-                         <li><a href="account.html">Account</a></li>
+                         <li><a href="login.php">Account</a></li>
                          <li class="cart"><a href="cart.html"> <ion-icon name ="basket"></ion-icon>Cart<span>0</span> </a> </li>
                          
 
