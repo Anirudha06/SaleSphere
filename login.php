@@ -123,7 +123,7 @@ form,
                  <li><a href="products.html">Products</a></li>
                  
                   <li><a href="contactus.html">ContactUs</a></li>
-                 <li><a href="account.html">Account</a></li>
+                 <li><a href="#">Account</a></li>
                   <li class="cart"><a href="cart.html"> <ion-icon name ="basket"></ion-icon>Cart<span>0</span> </a> </li>
 
             </ul>
@@ -150,7 +150,7 @@ form,
         <button type="submit" class="btn" name="submit">Login</button>
     </div>
     <p>
-        Not yet a member? <a href="register.html">Sign up</a>
+        Not yet a member? <a href="signup.php">Sign up</a>
     </p>
   </form>
   

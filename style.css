@@ -375,6 +375,11 @@ ul {
   }
 }
 
+@media (max-width: 500px) {
+  #menu-bar {
+    display: initial;
+  }
+
 /*--------------------all products-----------------------------------------------*/
 .row-2 {
   justify-content: space-between;

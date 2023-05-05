@@ -1,4 +1,6 @@
-<?php include('server.php') ?>
+<?php 
+session_start();
+include('connection.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -133,7 +135,7 @@ form,
   </div>
     
   <form method="post" action="register.php">
-    <?php include('errors.php'); ?>
+    <!-- <?php include('errors.php'); ?> -->
     <div class="input-group">
       <label>Username</label>
       <input type="text" name="username" value="">
@@ -156,7 +158,7 @@ form,
       <button type="submit" class="btn" name="reg_user">Register</button>
     </div>
     <p>
-        Already a member? <a href="login.php">Sign in</a>
+        Already a member? <a href="login.php">Log in</a>
     </p>
   </form>
 

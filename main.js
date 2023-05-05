@@ -270,3 +270,5 @@ displayCart();
 $("#payment").click(function() {
     alert("Payment Successful!.");
  });
+
+

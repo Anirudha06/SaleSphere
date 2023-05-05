@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+    <center>
     <h1>Login Successful!</h1>
+    <button><a href="index.html">OK</a></button>
+    </center>
 </body>
 </html>
